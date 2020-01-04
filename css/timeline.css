@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css?family=Exo+2:400,700&subset=cyrillic");
+@import "compass/css3";
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  line-height: 1.5;
+}
+
+.timeline__section{
+margin-top: 10%;
+
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 8px 20.66% 49px;
+  width: 100%;
+  margin-left: 5%;
+  z-index: 5;
+}
+
+.visible {
+  border: 1px solid black;
+  visibility: visible;
+  z-index: 1;
+}
+
+.hidden{
+  visibility: hidden;
+  display: none;
+  padding: 10px;
+  z-index: -1;
+}
+.hidden:hover {
+  visibility: visible;
+  display: inherit;
+}
+
+article {
+  position: relative;
+  /* max-width: 980px; */
+  margin: 0 auto;
+}
+h2{
+  font-size: 26px;
+  color: #000;
+  font-weight: bold;
+  z-index: 1;
+}
+
+p{
+  font-size: 20px;
+  z-index: 1;
+}
+
+#gallery {
+  width:100%;
+  margin:auto;
+  
+}
+#gallery ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+#gallery a {
+ color: black;;
+}
+
+
+#gallery ul li {
+  display:inline;
+  position:relative;
+  margin:0;
+  padding:0;
+  margin-top: 5%;
+  
+}
+#gallery ul li span {
+  visibility:hidden;
+  position:absolute;
+  width:100%;
+  left:0;
+  bottom:0px;
+  z-index:-3;
+  background:rgba(0,0,0,.6);
+  color:#FFF;
+}
+
+
+#gallery ul li:hover span {
+  visibility:visible;
+
+}
+
+
+.image-caption{
+  width: 100%;
+  height: 100%;
+  margin-left: 25%;
+}
+
+
+
+html
+.background-timeline{
+  background-image: url(../img/intro1.jpg);
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+ 
+  width:100%; 
+  height: 100vh;
+  min-height: 375px;
+  position: relative;
+}
+
+
+.timeline__nav {
+  /* position: fixed; */
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  transition: top 0.3s ease-out;
+  margin-left: 5%;
+}
+.timeline__nav ul {
+  list-style: none;
+  list-style-position: inside;
+  margin: 15px 0;
+}
+.timeline__nav ul li {
+  margin: 15px 0;
+  padding-left: 0;
+  list-style-type: none;
+  color: black;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.timeline__nav ul li.active {
+  font-weight: bold;
+  color: #f94125;
+  border-bottom: 1px dotted transparent;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.timeline__nav ul li:hover {
+  color: #000;
+}
+
+.button {
+  background-color:black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.imagem{
+  border:1px solid #222;
+    width:305px;
+    height:229px;
+}
+
+.hiddenimg {
+  display: none;
+  z-index: -2;
+}
+
+img{
+  z-index: 0;
+}
+
+
+.bitcoin{
+  z-index: -3;
+  width: 100%;
+  height: 500px;
+
+}
+
+.hiddentxt {
+  font-weight: bold;
+  color: #F00;
+}
+
+.hiddentxt a {
+  color: #F00;
+  text-decoration: none;
+}
+
+.hiddentxt:hover ~ .hiddenimg {
+  display: block;
+}
+
